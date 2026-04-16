@@ -369,7 +369,11 @@ img{max-width:100%;height:auto;display:block}
 /* MOBILE */
 @media(max-width:768px){
   .container{padding:0 20px}
-  .hero{padding:56px 0 64px}
+  .hero{padding:48px 0 56px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-text{align-items:center;text-align:center}
+  .hero-text .headline,.hero-text .subheadline{text-align:center}
+  .hero-image{order:-1}
   .headline{font-size:30px;line-height:1.2}
   .subheadline{font-size:16px}
   .section{padding:56px 0}
