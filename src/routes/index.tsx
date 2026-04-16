@@ -63,28 +63,41 @@ function LandingPage() {
         {/* HERO */}
         <section className="hero" aria-labelledby="hero-title">
           <div className="container hero-inner">
-            <span className="badge badge-date">TUTORIAL 100% GRATUITO — 21/05</span>
-            <h1 id="hero-title" className="headline">
-              Tutorial para Pele Madura: Como Parecer 10 Anos Mais Jovem com
-              Maquiagem
-            </h1>
-            <p className="subheadline">
-              Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos,
-              sem botox, sem procedimento e sem maquiagem pesada. Desenvolvida
-              especialmente para mulheres de 35 a 70 anos por uma das maiores
-              maquiadoras do Brasil.
-            </p>
-            <p className="hero-date">
-              TUTORIAL 100% GRATUITO NO DIA 21/05. CLIQUE NO BOTÃO ABAIXO PARA
-              PARTICIPAR.
-            </p>
-            <a
-              href={SENDFLOW_LINK}
-              className="cta cta-pulse"
-              aria-label="Inscrever-se no tutorial gratuito de maquiagem"
-            >
-              QUERO PARTICIPAR DE GRAÇA
-            </a>
+            <div className="hero-text">
+              <span className="badge badge-date">TUTORIAL 100% GRATUITO — 21/05</span>
+              <h1 id="hero-title" className="headline">
+                Tutorial para Pele Madura: Como Parecer 10 Anos Mais Jovem com
+                Maquiagem
+              </h1>
+              <p className="subheadline">
+                Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos,
+                sem botox, sem procedimento e sem maquiagem pesada. Desenvolvida
+                especialmente para mulheres de 35 a 70 anos por uma das maiores
+                maquiadoras do Brasil.
+              </p>
+              <p className="hero-date">
+                TUTORIAL 100% GRATUITO NO DIA 21/05. CLIQUE NO BOTÃO ABAIXO PARA
+                PARTICIPAR.
+              </p>
+              <a
+                href={SENDFLOW_LINK}
+                className="cta cta-pulse"
+                aria-label="Inscrever-se no tutorial gratuito de maquiagem"
+              >
+                QUERO PARTICIPAR DE GRAÇA
+              </a>
+            </div>
+            <div className="hero-image-wrap">
+              <img
+                src={aliceHero}
+                alt="Alice Salazar maquiando uma mulher de pele madura"
+                width={1047}
+                height={760}
+                fetchPriority="high"
+                decoding="async"
+                className="hero-image"
+              />
+            </div>
           </div>
         </section>
 
