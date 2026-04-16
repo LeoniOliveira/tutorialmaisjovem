@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aliceHero from "@/assets/alice-hero.webp";
+import aliceAuthority from "@/assets/alice-authority.webp";
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
