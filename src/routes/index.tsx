@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aliceHero from "@/assets/alice-hero.webp";
+import aliceAuthority from "@/assets/alice-authority.webp";
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
@@ -201,7 +202,7 @@ function LandingPage() {
             <div className="authority">
               <div className="alice-photo-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=480&h=480&fit=crop&crop=faces"
+                  src={aliceAuthority}
                   alt="Alice Salazar, maquiadora profissional"
                   width={320}
                   height={320}
