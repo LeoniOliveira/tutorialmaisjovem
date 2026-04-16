@@ -29,14 +29,16 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Como Parecer 10 Anos Mais Jovem com Maquiagem" },
+      { name: "description", content: "Página de captura para webinário gratuito de maquiagem para pele madura com Alice Salazar." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Como Parecer 10 Anos Mais Jovem com Maquiagem" },
+      { property: "og:description", content: "Página de captura para webinário gratuito de maquiagem para pele madura com Alice Salazar." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Como Parecer 10 Anos Mais Jovem com Maquiagem" },
+      { name: "twitter:description", content: "Página de captura para webinário gratuito de maquiagem para pele madura com Alice Salazar." },
     ],
     links: [
       {
