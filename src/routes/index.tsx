@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import aliceHero from "@/assets/alice-hero.webp";
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
@@ -62,28 +63,41 @@ function LandingPage() {
         {/* HERO */}
         <section className="hero" aria-labelledby="hero-title">
           <div className="container hero-inner">
-            <span className="badge badge-date">TUTORIAL 100% GRATUITO — 21/05</span>
-            <h1 id="hero-title" className="headline">
-              Tutorial para Pele Madura: Como Parecer 10 Anos Mais Jovem com
-              Maquiagem
-            </h1>
-            <p className="subheadline">
-              Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos,
-              sem botox, sem procedimento e sem maquiagem pesada. Desenvolvida
-              especialmente para mulheres de 35 a 70 anos por uma das maiores
-              maquiadoras do Brasil.
-            </p>
-            <p className="hero-date">
-              TUTORIAL 100% GRATUITO NO DIA 21/05. CLIQUE NO BOTÃO ABAIXO PARA
-              PARTICIPAR.
-            </p>
-            <a
-              href={SENDFLOW_LINK}
-              className="cta cta-pulse"
-              aria-label="Inscrever-se no tutorial gratuito de maquiagem"
-            >
-              QUERO PARTICIPAR DE GRAÇA
-            </a>
+            <div className="hero-text">
+              <span className="badge badge-date">TUTORIAL 100% GRATUITO — 21/05</span>
+              <h1 id="hero-title" className="headline">
+                Tutorial para Pele Madura: Como Parecer 10 Anos Mais Jovem com
+                Maquiagem
+              </h1>
+              <p className="subheadline">
+                Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos,
+                sem botox, sem procedimento e sem maquiagem pesada. Desenvolvida
+                especialmente para mulheres de 35 a 70 anos por uma das maiores
+                maquiadoras do Brasil.
+              </p>
+              <p className="hero-date">
+                TUTORIAL 100% GRATUITO NO DIA 21/05. CLIQUE NO BOTÃO ABAIXO PARA
+                PARTICIPAR.
+              </p>
+              <a
+                href={SENDFLOW_LINK}
+                className="cta cta-pulse"
+                aria-label="Inscrever-se no tutorial gratuito de maquiagem"
+              >
+                QUERO PARTICIPAR DE GRAÇA
+              </a>
+            </div>
+            <div className="hero-image-wrap">
+              <img
+                src={aliceHero}
+                alt="Alice Salazar maquiando uma mulher de pele madura"
+                width={1047}
+                height={760}
+                fetchPriority="high"
+                decoding="async"
+                className="hero-image"
+              />
+            </div>
           </div>
         </section>
 
@@ -283,8 +297,14 @@ a{color:var(--rosa-primario)}
 img{max-width:100%;height:auto;display:block}
 
 /* HERO */
-.hero{background:linear-gradient(180deg,var(--rose-bg) 0%,var(--branco) 100%);color:var(--escuro);padding:80px 0 88px;text-align:center;position:relative}
-.hero-inner{display:flex;flex-direction:column;align-items:center;gap:24px}
+.hero{background:linear-gradient(180deg,var(--rose-bg) 0%,var(--branco) 100%);color:var(--escuro);padding:72px 0 80px;position:relative}
+.hero .container{max-width:1180px}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hero-text{display:flex;flex-direction:column;align-items:flex-start;gap:22px;text-align:left}
+.hero-text .headline{text-align:left;max-width:none}
+.hero-text .subheadline{text-align:left;max-width:none}
+.hero-image-wrap{width:100%}
+.hero-image{width:100%;height:auto;border-radius:18px;box-shadow:0 16px 40px rgba(43,15,24,.25);object-fit:cover;aspect-ratio:1047/760}
 .badge{display:inline-block;font-weight:700;font-size:13px;letter-spacing:1.2px;
   padding:8px 16px;border-radius:999px;background:var(--rosa-claro);color:var(--rosa-primario)}
 .headline{font-size:44px;line-height:1.15;font-weight:800;color:var(--escuro);margin:0;max-width:760px;letter-spacing:-0.02em}
@@ -349,7 +369,11 @@ img{max-width:100%;height:auto;display:block}
 /* MOBILE */
 @media(max-width:768px){
   .container{padding:0 20px}
-  .hero{padding:56px 0 64px}
+  .hero{padding:48px 0 56px}
+  .hero-inner{grid-template-columns:1fr;gap:32px}
+  .hero-text{align-items:center;text-align:center}
+  .hero-text .headline,.hero-text .subheadline{text-align:center}
+  .hero-image{order:-1}
   .headline{font-size:30px;line-height:1.2}
   .subheadline{font-size:16px}
   .section{padding:56px 0}
