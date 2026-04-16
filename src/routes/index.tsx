@@ -265,9 +265,11 @@ function LandingPage() {
 
 const css = `
 :root{
-  --rosa-primario:#C2185B;--rosa-vibrante:#D63384;--rosa-claro:#FCE4EC;
-  --escuro:#1A1A2E;--cinza-texto:#4A4A4A;--cinza-bg:#F9F9F9;--branco:#FFFFFF;
+  --rosa-primario:#8B1E3F;--rosa-vibrante:#A82B53;--rosa-claro:#FADBD8;
+  --rose:#F4C9C2;--rose-bg:#FCE9E4;
+  --escuro:#2B0F18;--cinza-texto:#3D2A2F;--cinza-bg:#F7F3F2;--branco:#FFFFFF;
   --dourado:#B8860B;--dourado-claro:#FFF8E1;
+  --verde:#4ADE6A;--verde-escuro:#22C55E;--verde-hover:#16A34A;
 }
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0;padding:0}
