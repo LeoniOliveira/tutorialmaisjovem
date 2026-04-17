@@ -267,7 +267,7 @@ function LandingPage() {
 
         {/* RESULTADOS */}
         <section className="section section-results" aria-labelledby="results-title">
-          <div className="container">
+          <div className="container results-container">
             <h2 id="results-title" className="section-title">
               Veja resultados reais de quem está aplicando a técnica que você
               vai aprender
@@ -545,6 +545,7 @@ img{max-width:100%;height:auto;display:block}
 .section-dark{background:var(--cinza-bg);color:var(--escuro)}
 
 /* RESULTADOS */
+.results-container{max-width:1180px}
 .results-carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
   padding:8px 4px 24px;margin:0 -4px;scrollbar-width:thin;scrollbar-color:var(--rosa-claro) transparent;
   -webkit-overflow-scrolling:touch}
