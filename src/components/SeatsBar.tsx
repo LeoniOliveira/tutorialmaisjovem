@@ -10,7 +10,7 @@ export function bumpSeats(delta = 1) {
 }
 
 export default function SeatsBar() {
-  const [percent, setPercent] = useState(72);
+  const [percent, setPercent] = useState(83);
 
   useEffect(() => {
     const onBump: Listener = (delta) => {
