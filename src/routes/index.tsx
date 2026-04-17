@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense, useEffect, useState } from "react";
 import aliceHero from "@/assets/alice-hero.webp";
 import aliceAuthority from "@/assets/alice-authority.webp";
 import for1 from "@/assets/for-1.webp";
@@ -6,8 +7,10 @@ import for2 from "@/assets/for-2.webp";
 import for3 from "@/assets/for-3.webp";
 import for4 from "@/assets/for-4.webp";
 import for5 from "@/assets/for-5.webp";
-import SeatsBar from "@/components/SeatsBar";
-import SignupNotifications from "@/components/SignupNotifications";
+
+// Defer client-only urgency widgets until after first paint
+const SeatsBar = lazy(() => import("@/components/SeatsBar"));
+const SignupNotifications = lazy(() => import("@/components/SignupNotifications"));
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
