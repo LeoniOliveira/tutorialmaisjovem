@@ -140,11 +140,6 @@ const forCards = [
     image: for4,
     alt: "Mulher madura sorrindo com maquiagem leve e natural",
   },
-  {
-    text: "Quer se olhar no espelho e se reconhecer de novo",
-    image: for5,
-    alt: "Mulher madura sorrindo ao se olhar no espelho",
-  },
 ];
 
 function LandingPage() {
