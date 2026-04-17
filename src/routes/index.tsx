@@ -265,6 +265,56 @@ function LandingPage() {
           </div>
         </section>
 
+        {/* RESULTADOS */}
+        <section className="section section-results" aria-labelledby="results-title">
+          <div className="container">
+            <h2 id="results-title" className="section-title">
+              Veja resultados reais de quem está aplicando a técnica que você
+              vai aprender
+            </h2>
+            <div className="results-carousel" role="region" aria-label="Carrossel de antes e depois">
+              {[1, 2, 3, 4].map((n) => (
+                <article key={n} className="result-card">
+                  <div className="result-pair">
+                    <div className="result-side result-before">
+                      <span className="result-label result-label-before">ANTES</span>
+                      <div className="result-placeholder" aria-hidden="true">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <circle cx="9" cy="9" r="2" />
+                          <path d="m21 15-5-5L5 21" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="result-divider" aria-hidden="true" />
+                    <div className="result-side result-after">
+                      <span className="result-label result-label-after">DEPOIS</span>
+                      <div className="result-placeholder" aria-hidden="true">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <circle cx="9" cy="9" r="2" />
+                          <path d="m21 15-5-5L5 21" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="results-text">
+              Mulheres reais, como você, que antes sofriam com maquiagem que
+              envelhece e hoje se sentem bonitas, seguras e confiantes de
+              verdade. No dia <strong>21/05 às 20h</strong> você vai aprender
+              essa técnica de graça, ao vivo e na prática!
+            </p>
+            <div className="results-cta-wrap">
+              <a href={SENDFLOW_LINK} className="cta" aria-label="Inscrever-se gratuitamente no tutorial">
+                QUERO PARTICIPAR DE GRAÇA
+              </a>
+            </div>
+          </div>
+        </section>
+
 
         {/* APRENDIZADOS */}
         <section className="section section-pink" aria-labelledby="learn-title">
@@ -491,7 +541,36 @@ img{max-width:100%;height:auto;display:block}
 .section{padding:80px 0}
 .section-light{background:var(--branco)}
 .section-pink{background:var(--rose-bg)}
+.section-results{background:linear-gradient(180deg,#FFF8F6 0%,var(--branco) 100%)}
 .section-dark{background:var(--cinza-bg);color:var(--escuro)}
+
+/* RESULTADOS */
+.results-carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:8px 4px 24px;margin:0 -4px;scrollbar-width:thin;scrollbar-color:var(--rosa-claro) transparent;
+  -webkit-overflow-scrolling:touch}
+.results-carousel::-webkit-scrollbar{height:8px}
+.results-carousel::-webkit-scrollbar-thumb{background:var(--rosa-claro);border-radius:4px}
+.result-card{flex:0 0 calc(50% - 10px);scroll-snap-align:start;
+  background:var(--branco);border-radius:18px;overflow:hidden;
+  box-shadow:0 10px 30px rgba(139,30,63,.12);
+  border:1px solid rgba(139,30,63,.08)}
+.result-pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch}
+.result-side{position:relative;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
+.result-before{background:linear-gradient(135deg,#EFE5E2,#E0D2CE)}
+.result-after{background:linear-gradient(135deg,var(--rose-bg),var(--rosa-claro))}
+.result-divider{width:2px;background:var(--branco)}
+.result-label{position:absolute;top:14px;left:14px;font-size:11px;font-weight:800;letter-spacing:1.5px;
+  padding:5px 10px;border-radius:999px;text-transform:uppercase}
+.result-label-before{background:rgba(43,15,24,.78);color:#fff}
+.result-label-after{background:var(--rosa-primario);color:#fff}
+.result-placeholder{color:rgba(43,15,24,.25)}
+.result-after .result-placeholder{color:var(--rosa-primario);opacity:.4}
+.results-text{max-width:760px;margin:36px auto 28px;text-align:center;
+  font-size:17px;line-height:1.65;color:var(--cinza-texto)}
+.results-text strong{color:var(--rosa-primario);font-weight:800}
+.results-cta-wrap{display:flex;justify-content:center}
+
+
 .section-title{font-size:32px;line-height:1.2;font-weight:800;color:var(--escuro);
   margin:0 0 40px;text-align:center;letter-spacing:-0.01em}
 
@@ -585,5 +664,7 @@ img{max-width:100%;height:auto;display:block}
   .problem-text p{font-size:15.5px}
   .problem-lead{font-size:17px !important}
   .problem-closing{font-size:15.5px !important;padding:16px 18px}
+  .result-card{flex:0 0 85%}
+  .results-text{font-size:15.5px;margin:24px auto 22px}
 }
 `;
