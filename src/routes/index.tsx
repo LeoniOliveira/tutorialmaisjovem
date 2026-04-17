@@ -9,6 +9,10 @@ import for4 from "@/assets/for-4.webp";
 import for5 from "@/assets/for-5.webp";
 import for4New from "@/assets/for-4-new.webp";
 import heavyMakeup from "@/assets/heavy-makeup-problem.webp";
+import antesDepois3 from "@/assets/antes-depois-3.webp";
+import antesDepois4 from "@/assets/antes-depois-4.webp";
+import antesDepois5 from "@/assets/antes-depois-5.webp";
+import antesDepois6 from "@/assets/antes-depois-6.webp";
 
 // Defer client-only urgency widgets until after first paint
 const SeatsBar = lazy(() => import("@/components/SeatsBar"));
@@ -272,33 +276,16 @@ function LandingPage() {
               Veja resultados reais de quem está aplicando a técnica que você
               vai aprender
             </h2>
-            <div className="results-carousel" role="region" aria-label="Carrossel de antes e depois">
-              {[1, 2, 3, 4].map((n) => (
-                <article key={n} className="result-card">
-                  <div className="result-pair">
-                    <div className="result-side result-before">
-                      <span className="result-label result-label-before">ANTES</span>
-                      <div className="result-placeholder" aria-hidden="true">
-                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <circle cx="9" cy="9" r="2" />
-                          <path d="m21 15-5-5L5 21" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="result-divider" aria-hidden="true" />
-                    <div className="result-side result-after">
-                      <span className="result-label result-label-after">DEPOIS</span>
-                      <div className="result-placeholder" aria-hidden="true">
-                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <circle cx="9" cy="9" r="2" />
-                          <path d="m21 15-5-5L5 21" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+            <div className="results-grid">
+              {[
+                { src: antesDepois3, alt: "Antes e depois - mulher morena" },
+                { src: antesDepois4, alt: "Antes e depois - mulher castanha" },
+                { src: antesDepois5, alt: "Antes e depois - mulher negra" },
+                { src: antesDepois6, alt: "Antes e depois - mulher cabelos grisalhos" },
+              ].map((img) => (
+                <figure key={img.src} className="result-item">
+                  <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+                </figure>
               ))}
             </div>
             <p className="results-text">
@@ -551,26 +538,10 @@ img{max-width:100%;height:auto;display:block}
 
 /* RESULTADOS */
 .results-container{max-width:1180px}
-.results-carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
-  padding:8px 4px 24px;margin:0 -4px;scrollbar-width:thin;scrollbar-color:var(--rosa-claro) transparent;
-  -webkit-overflow-scrolling:touch}
-.results-carousel::-webkit-scrollbar{height:8px}
-.results-carousel::-webkit-scrollbar-thumb{background:var(--rosa-claro);border-radius:4px}
-.result-card{flex:0 0 calc(50% - 10px);scroll-snap-align:start;
-  background:var(--branco);border-radius:18px;overflow:hidden;
-  box-shadow:0 10px 30px rgba(139,30,63,.12);
-  border:1px solid rgba(139,30,63,.08)}
-.result-pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch}
-.result-side{position:relative;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
-.result-before{background:linear-gradient(135deg,#EFE5E2,#E0D2CE)}
-.result-after{background:linear-gradient(135deg,var(--rose-bg),var(--rosa-claro))}
-.result-divider{width:2px;background:var(--branco)}
-.result-label{position:absolute;top:14px;left:14px;font-size:11px;font-weight:800;letter-spacing:1.5px;
-  padding:5px 10px;border-radius:999px;text-transform:uppercase}
-.result-label-before{background:rgba(43,15,24,.78);color:#fff}
-.result-label-after{background:var(--rosa-primario);color:#fff}
-.result-placeholder{color:rgba(43,15,24,.25)}
-.result-after .result-placeholder{color:var(--rosa-primario);opacity:.4}
+.results-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:8px 0 0}
+.result-item{margin:0;border-radius:14px;overflow:hidden;background:#000;
+  box-shadow:0 8px 24px rgba(43,15,24,.12)}
+.result-item img{display:block;width:100%;height:auto}
 .results-text{max-width:760px;margin:36px auto 28px;text-align:center;
   font-size:17px;line-height:1.65;color:var(--cinza-texto)}
 .results-text strong{color:var(--rosa-primario);font-weight:800}
@@ -673,7 +644,7 @@ img{max-width:100%;height:auto;display:block}
   .problem-text p{font-size:15.5px}
   .problem-lead{font-size:17px !important}
   .problem-closing{font-size:15.5px !important;padding:16px 18px}
-  .result-card{flex:0 0 85%}
+  .results-grid{grid-template-columns:1fr;gap:14px}
   .results-text{font-size:15.5px;margin:24px auto 22px}
 }
 `;
