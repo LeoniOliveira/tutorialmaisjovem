@@ -398,14 +398,19 @@ function LandingPage() {
                   <strong>40 mil alunas</strong> que transformaram sua autoestima.
                 </p>
                 <p>
-                  Neste Tutorial ao vivo, ela vai ensinar na prática como parecer
-                  10 anos mais jovem com uma única técnica de maquiagem
-                  desenvolvida ao longo de uma vida como maquiadora profissional.
+                  Neste Tutorial ao vivo, ela vai ensinar na prática como
+                  parecer 10 anos mais jovem com uma única técnica de
+                  maquiagem, sem produtos caros e sem pesar.
                 </p>
-                <p>
-                  Essa é a chance de você descobrir o que funciona de verdade
-                  para pele madura e voltar a ter segurança, sabendo que a
-                  maquiagem se tornou aliada da sua beleza.
+                <a
+                  href={SENDFLOW_LINK}
+                  className="cta authority-cta"
+                  aria-label="Inscrever-se gratuitamente no tutorial"
+                >
+                  QUERO PARTICIPAR DE GRAÇA
+                </a>
+                <p className="authority-warning">
+                  ⚠️ Tutorial 100% Gratuito — Dia 21/05 às 20h — Vagas Limitadas
                 </p>
               </div>
             </div>
