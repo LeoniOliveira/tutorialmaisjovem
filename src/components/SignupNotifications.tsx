@@ -69,12 +69,12 @@ export default function SignupNotifications() {
         }
         .notif-card {
           position: fixed;
-          bottom: 20px;
+          bottom: 80px;
           left: 20px;
-          z-index: 90;
+          z-index: 110;
           background: #fff;
           border: 1px solid rgba(0,0,0,0.06);
-          box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.18);
           border-radius: 12px;
           padding: 12px 16px 12px 12px;
           display: flex;
@@ -94,7 +94,7 @@ export default function SignupNotifications() {
         .notif-text strong { color: #2B0F18; font-weight: 700; }
         .notif-ago { display: block; font-size: 11px; color: #8B7B80; margin-top: 2px; }
         @media(max-width:480px){
-          .notif-card{ left:12px; right:12px; bottom:12px; max-width:none; }
+          .notif-card{ left:12px; right:12px; bottom:72px; max-width:none; }
         }
       `}</style>
       {notif && (
