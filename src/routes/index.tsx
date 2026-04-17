@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aliceHero from "@/assets/alice-hero.webp";
 import aliceAuthority from "@/assets/alice-authority.webp";
+import SeatsBar from "@/components/SeatsBar";
+import SignupNotifications from "@/components/SignupNotifications";
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
@@ -128,7 +130,9 @@ function LandingPage() {
   return (
     <>
       <style>{css}</style>
-      <main className="page">
+      <SeatsBar />
+      <SignupNotifications />
+      <main className="page" style={{ paddingTop: 32 }}>
         {/* SCARCITY BAR */}
         <div className="scarcity-bar" role="alert">
           <span className="scarcity-dot" aria-hidden="true" />
