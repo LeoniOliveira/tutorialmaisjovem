@@ -1,6 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import aliceHero from "@/assets/alice-hero.webp";
 import aliceAuthority from "@/assets/alice-authority.webp";
+import for1 from "@/assets/for-1.webp";
+import for2 from "@/assets/for-2.webp";
+import for3 from "@/assets/for-3.webp";
+import for4 from "@/assets/for-4.webp";
+import for5 from "@/assets/for-5.webp";
 import SeatsBar from "@/components/SeatsBar";
 import SignupNotifications from "@/components/SignupNotifications";
 
@@ -101,28 +106,28 @@ const learnItems = [
 const forCards = [
   {
     text: "Tem melasma, olheiras, pálpebras caídas ou rugas marcadas e não sabe como lidar com isso na maquiagem",
-    emoji: "🪞",
-    label: "Rosto / espelho",
+    image: for1,
+    alt: "Mulher madura com melasma e olheiras se olhando",
   },
   {
     text: "Tem entre 35 e 70 anos, olha no espelho depois de se maquiar e sente que ficou mais velha do que antes de começar",
-    emoji: "⏰",
-    label: "Tempo",
+    image: for2,
+    alt: "Mulher madura observando o rosto no espelho do banheiro",
   },
   {
     text: "Já tentou tutoriais no YouTube e nunca conseguiu reproduzir em casa, e acha que o problema é você",
-    emoji: "▶️",
-    label: "Vídeo",
+    image: for3,
+    alt: "Mulher tentando reproduzir tutorial de maquiagem em casa",
   },
   {
     text: "Quer uma maquiagem leve e natural que te deixe bonita de verdade, sem parecer máscara",
-    emoji: "🎨",
-    label: "Pincel / paleta",
+    image: for4,
+    alt: "Mulher madura sorrindo com maquiagem leve e natural",
   },
   {
     text: "Quer se olhar no espelho e se reconhecer de novo",
-    emoji: "💖",
-    label: "Coração",
+    image: for5,
+    alt: "Mulher madura sorrindo ao se olhar no espelho",
   },
 ];
 
@@ -222,11 +227,15 @@ function LandingPage() {
             <div className="for-grid">
               {forCards.map((card, i) => (
                 <article key={i} className="for-card">
-                  <div className="for-card-image" aria-label={card.label}>
-                    <span className="for-card-emoji" aria-hidden="true">
-                      {card.emoji}
-                    </span>
-                  </div>
+                  <img
+                    src={card.image}
+                    alt={card.alt}
+                    width={640}
+                    height={360}
+                    loading="lazy"
+                    decoding="async"
+                    className="for-card-image"
+                  />
                   <p className="for-card-text">{card.text}</p>
                 </article>
               ))}
@@ -420,10 +429,7 @@ img{max-width:100%;height:auto;display:block}
   border:1px solid rgba(139,30,63,.06);
   display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
 .for-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(139,30,63,.14)}
-.for-card-image{aspect-ratio:16/9;width:100%;
-  background:linear-gradient(135deg,var(--rose-bg),var(--rosa-claro));
-  display:flex;align-items:center;justify-content:center}
-.for-card-emoji{font-size:54px;line-height:1;filter:drop-shadow(0 4px 8px rgba(139,30,63,.18))}
+.for-card-image{aspect-ratio:16/9;width:100%;object-fit:cover;display:block;background:var(--rose-bg)}
 .for-card-text{margin:0;padding:22px 24px 26px;font-size:16px;line-height:1.55;color:var(--cinza-texto);font-weight:500}
 .for-grid > .for-card:nth-child(5):last-child{grid-column:span 2;max-width:480px;margin:0 auto;width:100%}
 
@@ -472,7 +478,6 @@ img{max-width:100%;height:auto;display:block}
   .learn-item-text{font-size:14.5px}
   .for-grid{grid-template-columns:1fr;gap:18px}
   .for-grid > .for-card:nth-child(5):last-child{grid-column:auto;max-width:none}
-  .for-card-emoji{font-size:46px}
   .for-card-text{padding:18px 20px 22px;font-size:15px}
   .authority{grid-template-columns:1fr;gap:28px;text-align:center}
   .authority-text{text-align:left}
