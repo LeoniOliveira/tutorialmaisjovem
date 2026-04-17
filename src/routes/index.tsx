@@ -276,33 +276,16 @@ function LandingPage() {
               Veja resultados reais de quem está aplicando a técnica que você
               vai aprender
             </h2>
-            <div className="results-carousel" role="region" aria-label="Carrossel de antes e depois">
-              {[1, 2, 3, 4].map((n) => (
-                <article key={n} className="result-card">
-                  <div className="result-pair">
-                    <div className="result-side result-before">
-                      <span className="result-label result-label-before">ANTES</span>
-                      <div className="result-placeholder" aria-hidden="true">
-                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <circle cx="9" cy="9" r="2" />
-                          <path d="m21 15-5-5L5 21" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="result-divider" aria-hidden="true" />
-                    <div className="result-side result-after">
-                      <span className="result-label result-label-after">DEPOIS</span>
-                      <div className="result-placeholder" aria-hidden="true">
-                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                          <rect x="3" y="3" width="18" height="18" rx="2" />
-                          <circle cx="9" cy="9" r="2" />
-                          <path d="m21 15-5-5L5 21" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </article>
+            <div className="results-grid">
+              {[
+                { src: antesDepois3, alt: "Antes e depois - mulher morena" },
+                { src: antesDepois4, alt: "Antes e depois - mulher castanha" },
+                { src: antesDepois5, alt: "Antes e depois - mulher negra" },
+                { src: antesDepois6, alt: "Antes e depois - mulher cabelos grisalhos" },
+              ].map((img) => (
+                <figure key={img.src} className="result-item">
+                  <img src={img.src} alt={img.alt} loading="lazy" decoding="async" />
+                </figure>
               ))}
             </div>
             <p className="results-text">
