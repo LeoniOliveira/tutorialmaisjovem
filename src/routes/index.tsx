@@ -141,11 +141,29 @@ const forCards = [
 ];
 
 function LandingPage() {
+  const [showUrgency, setShowUrgency] = useState(false);
+
+  useEffect(() => {
+    const w = window as Window & {
+      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
+    };
+    const id = w.requestIdleCallback
+      ? w.requestIdleCallback(() => setShowUrgency(true), { timeout: 2500 })
+      : window.setTimeout(() => setShowUrgency(true), 1500);
+    return () => {
+      if (typeof id === "number") window.clearTimeout(id);
+    };
+  }, []);
+
   return (
     <>
       <style>{css}</style>
-      <SeatsBar />
-      <SignupNotifications />
+      {showUrgency && (
+        <Suspense fallback={null}>
+          <SeatsBar />
+          <SignupNotifications />
+        </Suspense>
+      )}
       <main className="page">
         {/* SCARCITY BAR */}
         <div className="scarcity-bar" role="alert">
