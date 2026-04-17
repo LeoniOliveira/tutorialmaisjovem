@@ -398,14 +398,19 @@ function LandingPage() {
                   <strong>40 mil alunas</strong> que transformaram sua autoestima.
                 </p>
                 <p>
-                  Neste Tutorial ao vivo, ela vai ensinar na prática como parecer
-                  10 anos mais jovem com uma única técnica de maquiagem
-                  desenvolvida ao longo de uma vida como maquiadora profissional.
+                  Neste Tutorial ao vivo, ela vai ensinar na prática como
+                  parecer 10 anos mais jovem com uma única técnica de
+                  maquiagem, sem produtos caros e sem pesar.
                 </p>
-                <p>
-                  Essa é a chance de você descobrir o que funciona de verdade
-                  para pele madura e voltar a ter segurança, sabendo que a
-                  maquiagem se tornou aliada da sua beleza.
+                <a
+                  href={SENDFLOW_LINK}
+                  className="cta authority-cta"
+                  aria-label="Inscrever-se gratuitamente no tutorial"
+                >
+                  QUERO PARTICIPAR DE GRAÇA
+                </a>
+                <p className="authority-warning">
+                  ⚠️ Tutorial 100% Gratuito — Dia 21/05 às 20h — Vagas Limitadas
                 </p>
               </div>
             </div>
@@ -618,7 +623,10 @@ img{max-width:100%;height:auto;display:block}
   padding:8px 16px;border-radius:999px;white-space:nowrap;box-shadow:0 4px 12px rgba(0,0,0,.2)}
 .authority-text p{margin:0 0 16px;font-size:17px;color:var(--cinza-texto)}
 .authority-text strong{color:var(--escuro)}
-.authority-text p:last-child{margin-bottom:0}
+.authority-text p:last-of-type{margin-bottom:0}
+.authority-cta{margin-top:24px;max-width:420px}
+.authority-warning{margin:14px 0 0 !important;font-size:14px !important;font-weight:700;
+  color:var(--vermelho-escuro) !important;letter-spacing:.2px}
 
 /* FINAL CTA */
 .final-headline{font-size:30px;line-height:1.25;font-weight:800;color:var(--escuro);
