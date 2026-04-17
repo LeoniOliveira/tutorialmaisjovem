@@ -39,18 +39,31 @@ export default function SeatsBar() {
     <div
       style={{
         position: "fixed",
-        top: 0,
+        bottom: 0,
         left: 0,
         right: 0,
         zIndex: 100,
         background: "rgba(255,255,255,0.96)",
         backdropFilter: "blur(6px)",
-        borderBottom: "1px solid rgba(0,0,0,0.06)",
-        boxShadow: "0 1px 8px rgba(0,0,0,0.04)",
+        borderTop: "1px solid rgba(0,0,0,0.06)",
+        boxShadow: "0 -1px 8px rgba(0,0,0,0.06)",
       }}
       role="status"
       aria-live="polite"
     >
+      <div
+        style={{
+          fontSize: 11.5,
+          fontWeight: 600,
+          color: "#3D2A2F",
+          textAlign: "center",
+          padding: "5px 12px",
+          letterSpacing: 0.3,
+        }}
+      >
+        <span style={{ color }}>●</span>{" "}
+        {percent}% das vagas já foram preenchidas · Apenas {remaining} vagas restantes
+      </div>
       <div
         style={{
           height: 7,
@@ -67,19 +80,6 @@ export default function SeatsBar() {
             transition: "width 1.2s ease, background-color 0.6s ease",
           }}
         />
-      </div>
-      <div
-        style={{
-          fontSize: 11.5,
-          fontWeight: 600,
-          color: "#3D2A2F",
-          textAlign: "center",
-          padding: "5px 12px",
-          letterSpacing: 0.3,
-        }}
-      >
-        <span style={{ color }}>●</span>{" "}
-        {percent}% das vagas já foram preenchidas · Apenas {remaining} vagas restantes
       </div>
     </div>
   );

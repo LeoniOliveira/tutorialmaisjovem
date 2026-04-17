@@ -132,7 +132,7 @@ function LandingPage() {
       <style>{css}</style>
       <SeatsBar />
       <SignupNotifications />
-      <main className="page" style={{ paddingTop: 32 }}>
+      <main className="page">
         {/* SCARCITY BAR */}
         <div className="scarcity-bar" role="alert">
           <span className="scarcity-dot" aria-hidden="true" />
