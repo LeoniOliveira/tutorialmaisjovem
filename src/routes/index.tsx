@@ -222,46 +222,49 @@ function LandingPage() {
 
         {/* PROBLEMA */}
         <section className="section section-light" aria-labelledby="problem-title">
-          <div className="container narrow">
+          <div className="container problem-container">
             <h2 id="problem-title" className="problem-headline">
               Você sabia que a maquiagem que você está usando hoje pode estar te
-              envelhecendo mais do que as próprias rugas?
+              envelhecendo <span className="problem-headline-accent">mais do que as próprias rugas?</span>
             </h2>
-            <div className="problem-image-wrap">
-              <img
-                src={heavyMakeup}
-                alt="Mulher madura com maquiagem pesada e craquelada marcando as rugas"
-                width={1024}
-                height={1024}
-                loading="lazy"
-                decoding="async"
-                className="problem-image"
-              />
-            </div>
-            <div className="problem-text">
-              <p>
-                O problema não é sua idade, sua pele ser difícil ou porque você
-                não nasceu para a maquiagem.
-              </p>
-              <p>
-                A verdade é que a técnica que você aprendeu anos atrás já não
-                funciona mais para a sua pele hoje.
-              </p>
-              <p>
-                Você não precisa de produtos caros, horas de tentativa e muito
-                menos técnicas complexas para ter uma make perfeita, com zero
-                rugas e aquela pele com efeito de pêssego. Com uma sequência de
-                3 movimentos simples, em menos de 15 minutos, sua aparência
-                fica <strong>10 ANOS MAIS JOVEM</strong>, sem exageros.
-              </p>
-              <p className="problem-closing">
-                E é isso que você vai aprender de graça com a maior referência
-                em maquiagem do Brasil no Tutorial de Maquiagem para Pele
-                Madura.
-              </p>
+            <div className="problem-grid">
+              <div className="problem-image-wrap">
+                <img
+                  src={heavyMakeup}
+                  alt="Mulher madura com maquiagem pesada e craquelada marcando as rugas"
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  decoding="async"
+                  className="problem-image"
+                />
+              </div>
+              <div className="problem-text">
+                <p className="problem-lead">
+                  O problema <strong>não é sua idade</strong>, sua pele ser
+                  difícil ou porque você não nasceu para a maquiagem.
+                </p>
+                <p>
+                  A verdade é que a técnica que você aprendeu anos atrás{" "}
+                  <strong>já não funciona mais</strong> para a sua pele hoje.
+                </p>
+                <p>
+                  Você não precisa de produtos caros, horas de tentativa e muito
+                  menos técnicas complexas para ter uma make perfeita, com zero
+                  rugas e aquela pele com efeito de pêssego. Com uma sequência
+                  de 3 movimentos simples, em menos de 15 minutos, sua aparência
+                  fica <strong>10 ANOS MAIS JOVEM</strong>, sem exageros.
+                </p>
+                <p className="problem-closing">
+                  E é isso que você vai aprender <strong>de graça</strong> com a
+                  maior referência em maquiagem do Brasil no Tutorial de
+                  Maquiagem para Pele Madura.
+                </p>
+              </div>
             </div>
           </div>
         </section>
+
 
         {/* APRENDIZADOS */}
         <section className="section section-pink" aria-labelledby="learn-title">
@@ -465,16 +468,24 @@ img{max-width:100%;height:auto;display:block}
 @media(prefers-reduced-motion:reduce){.cta-pulse{animation:none}}
 
 /* PROBLEMA */
-.problem-headline{font-size:30px;line-height:1.25;font-weight:800;color:var(--escuro);
-  margin:0 0 28px;text-align:center;letter-spacing:-0.015em}
-.problem-image-wrap{margin:0 auto 28px;max-width:480px}
-.problem-image{width:100%;height:auto;border-radius:16px;
-  box-shadow:0 12px 32px rgba(43,15,24,.18);aspect-ratio:1/1;object-fit:cover}
-.problem-text p{margin:0 0 16px;font-size:16.5px;line-height:1.65;color:var(--cinza-texto)}
-.problem-text p:last-child{margin-bottom:0}
-.problem-text strong{color:var(--rosa-primario);font-weight:800}
-.problem-closing{font-weight:600;color:var(--escuro) !important;
-  border-left:3px solid var(--rosa-primario);padding-left:16px;margin-top:24px !important}
+.problem-container{max-width:1120px}
+.problem-headline{font-size:38px;line-height:1.2;font-weight:800;color:var(--escuro);
+  margin:0 0 48px;text-align:center;letter-spacing:-0.02em;max-width:920px;margin-left:auto;margin-right:auto}
+.problem-headline-accent{color:var(--rosa-primario);display:inline}
+.problem-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+  gap:56px;align-items:center}
+.problem-image-wrap{position:relative}
+.problem-image{width:100%;height:auto;border-radius:18px;
+  box-shadow:0 18px 44px rgba(43,15,24,.22);aspect-ratio:1/1;object-fit:cover}
+.problem-text{display:flex;flex-direction:column;gap:18px}
+.problem-text p{margin:0;font-size:17px;line-height:1.65;color:var(--cinza-texto)}
+.problem-text strong{color:var(--escuro);font-weight:700}
+.problem-lead{font-size:19px !important;font-weight:500;color:var(--escuro) !important;line-height:1.5 !important}
+.problem-closing{background:var(--rose-bg);border-left:4px solid var(--rosa-primario);
+  padding:18px 20px;border-radius:0 12px 12px 0;font-weight:500;
+  color:var(--escuro) !important;font-size:16.5px !important;margin-top:6px !important}
+.problem-closing strong{color:var(--rosa-primario)}
+
 
 /* SECTIONS */
 .section{padding:80px 0}
@@ -568,7 +579,11 @@ img{max-width:100%;height:auto;display:block}
   .final-headline{font-size:23px}
   .cta{font-size:16px;padding:18px 20px}
   .scarcity-bar{font-size:12.5px;padding:9px 14px}
-  .problem-headline{font-size:22px}
-  .problem-text p{font-size:15px}
+  .problem-headline{font-size:24px;margin-bottom:28px}
+  .problem-grid{grid-template-columns:1fr;gap:28px}
+  .problem-image-wrap{max-width:420px;margin:0 auto}
+  .problem-text p{font-size:15.5px}
+  .problem-lead{font-size:17px !important}
+  .problem-closing{font-size:15.5px !important;padding:16px 18px}
 }
 `;
