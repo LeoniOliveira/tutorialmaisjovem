@@ -49,26 +49,102 @@ export const Route = createFileRoute("/")({
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap",
       },
     ],
   }),
   component: LandingPage,
 });
 
+const ClockIcon = () => (
+  <svg
+    aria-hidden="true"
+    width="18"
+    height="18"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <polyline points="12 6 12 12 16 14" />
+  </svg>
+);
+
+const learnItems = [
+  {
+    title: "O erro silencioso",
+    text: "que faz a maquiagem craquelar, pesar e envelhecer ainda mais a pele madura",
+  },
+  {
+    title: "A técnica dos 3 movimentos",
+    text: "que transforma a textura da pele em minutos, deixando a pele mais jovem, natural com aspecto de pêssego sem nenhum filtro",
+  },
+  {
+    title: "Como abrir o olhar",
+    text: "esconder as rugas e levantar a pálpebra caída sem ficar pesado",
+  },
+  {
+    title: "A sequência exata de preparação da pele madura",
+    text: "que nenhum tutorial genérico do YouTube ensina",
+  },
+  {
+    title: "Como montar uma rotina de 10 a 15 minutos",
+    text: "com produtos acessíveis que funcionam de verdade na pele madura",
+  },
+];
+
+const forCards = [
+  {
+    text: "Tem melasma, olheiras, pálpebras caídas ou rugas marcadas e não sabe como lidar com isso na maquiagem",
+    emoji: "🪞",
+    label: "Rosto / espelho",
+  },
+  {
+    text: "Tem entre 35 e 70 anos, olha no espelho depois de se maquiar e sente que ficou mais velha do que antes de começar",
+    emoji: "⏰",
+    label: "Tempo",
+  },
+  {
+    text: "Já tentou tutoriais no YouTube e nunca conseguiu reproduzir em casa, e acha que o problema é você",
+    emoji: "▶️",
+    label: "Vídeo",
+  },
+  {
+    text: "Quer uma maquiagem leve e natural que te deixe bonita de verdade, sem parecer máscara",
+    emoji: "🎨",
+    label: "Pincel / paleta",
+  },
+  {
+    text: "Quer se olhar no espelho e se reconhecer de novo",
+    emoji: "💖",
+    label: "Coração",
+  },
+];
+
 function LandingPage() {
   return (
     <>
       <style>{css}</style>
       <main className="page">
+        {/* SCARCITY BAR */}
+        <div className="scarcity-bar" role="alert">
+          <span className="scarcity-dot" aria-hidden="true" />
+          <strong>Vagas limitadas</strong>
+          <span aria-hidden="true"> | </span>
+          <span>Restam algumas vagas disponíveis</span>
+        </div>
+
         {/* HERO */}
         <section className="hero" aria-labelledby="hero-title">
           <div className="container hero-inner">
             <div className="hero-text">
-              <span className="badge badge-date">TUTORIAL 100% GRATUITO — 21/05</span>
+              <span className="badge badge-free">🔴 AULA GRÁTIS</span>
+              <p className="overline">TUTORIAL PARA PELE MADURA</p>
               <h1 id="hero-title" className="headline">
-                Tutorial para Pele Madura: Como Parecer 10 Anos Mais Jovem com
-                Maquiagem
+                Como Parecer 10 Anos Mais Jovem com Maquiagem
               </h1>
               <p className="subheadline">
                 Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos,
@@ -77,15 +153,20 @@ function LandingPage() {
                 maquiadoras do Brasil.
               </p>
               <p className="hero-date">
-                TUTORIAL 100% GRATUITO NO DIA 21/05. CLIQUE NO BOTÃO ABAIXO PARA
-                PARTICIPAR.
+                <span className="hero-date-pill">
+                  <ClockIcon />
+                  <span>21/05 · Às 20h</span>
+                </span>
+                <span className="hero-date-text">
+                  TUTORIAL 100% GRATUITO. CLIQUE NO BOTÃO ABAIXO PARA PARTICIPAR.
+                </span>
               </p>
               <a
                 href={SENDFLOW_LINK}
                 className="cta cta-pulse"
                 aria-label="Inscrever-se no tutorial gratuito de maquiagem"
               >
-                QUERO PARTICIPAR DE GRAÇA
+                QUERO GARANTIR MEU LUGAR AGORA
               </a>
             </div>
             <div className="hero-image-wrap">
@@ -108,88 +189,44 @@ function LandingPage() {
             <h2 id="learn-title" className="section-title">
               O que você vai aprender no Tutorial?
             </h2>
-            <ul className="learn-list">
-              <li>
-                <span className="learn-icon" aria-hidden="true">✨</span>
-                <span>
-                  <strong>O erro silencioso</strong> que faz a maquiagem craquela,
-                  pesar e envelhecer ainda mais a pele madura
-                </span>
-              </li>
-              <li>
-                <span className="learn-icon" aria-hidden="true">✨</span>
-                <span>
-                  <strong>A técnica dos 3 movimentos</strong> que transforma a
-                  textura da pele em minutos, deixando a pele mais jovem, natural
-                  com aspecto de pêssego sem nenhum filtro
-                </span>
-              </li>
-              <li>
-                <span className="learn-icon" aria-hidden="true">✨</span>
-                <span>
-                  <strong>Como abrir o olhar</strong>, esconder as rugas e
-                  levantar a pálpebra caída sem ficar pesado
-                </span>
-              </li>
-              <li>
-                <span className="learn-icon" aria-hidden="true">✨</span>
-                <span>
-                  <strong>A sequência exata de preparação da pele madura</strong>{" "}
-                  que nenhum tutorial genérico do YouTube ensina
-                </span>
-              </li>
-              <li>
-                <span className="learn-icon" aria-hidden="true">✨</span>
-                <span>
-                  <strong>Como montar uma rotina de 10 a 15 minutos</strong> com
-                  produtos acessíveis que funcionam de verdade na pele madura
-                </span>
-              </li>
-            </ul>
-            <p className="date-highlight">📅 TUTORIAL AO VIVO NO DIA 21/05</p>
+            <ol className="learn-list">
+              {learnItems.map((item, i) => (
+                <li key={i} className="learn-item">
+                  <div className="learn-number" aria-hidden="true">
+                    {String(i + 1).padStart(2, "0")}
+                  </div>
+                  <div className="learn-body">
+                    <h3 className="learn-item-title">{item.title}</h3>
+                    <p className="learn-item-text">{item.text}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <p className="date-highlight">
+              <ClockIcon />
+              <span>TUTORIAL AO VIVO NO DIA 21/05 · ÀS 20H</span>
+            </p>
           </div>
         </section>
 
         {/* PARA QUEM É */}
         <section className="section section-pink" aria-labelledby="for-title">
-          <div className="container narrow">
+          <div className="container">
             <h2 id="for-title" className="section-title">
               Esse Tutorial é para você que:
             </h2>
-            <ul className="for-list">
-              <li>
-                <span className="check" aria-hidden="true">✅</span>
-                <span>
-                  Tem melasma, olheiras, pálpebras caídas ou rugas marcadas e não
-                  sabe como lidar com isso na maquiagem
-                </span>
-              </li>
-              <li>
-                <span className="check" aria-hidden="true">✅</span>
-                <span>
-                  Tem entre 35 e 70 anos, olha no espelho depois de se maquiar e
-                  sente que ficou mais velha do que antes de começar
-                </span>
-              </li>
-              <li>
-                <span className="check" aria-hidden="true">✅</span>
-                <span>
-                  Já tentou tutoriais no YouTube e nunca conseguiu reproduzir em
-                  casa, e acha que o problema é você
-                </span>
-              </li>
-              <li>
-                <span className="check" aria-hidden="true">✅</span>
-                <span>
-                  Quer uma maquiagem leve e natural que te deixe bonita de
-                  verdade, sem parecer máscara
-                </span>
-              </li>
-              <li>
-                <span className="check" aria-hidden="true">✅</span>
-                <span>Quer se olhar no espelho e se reconhecer de novo</span>
-              </li>
-            </ul>
+            <div className="for-grid">
+              {forCards.map((card, i) => (
+                <article key={i} className="for-card">
+                  <div className="for-card-image" aria-label={card.label}>
+                    <span className="for-card-emoji" aria-hidden="true">
+                      {card.emoji}
+                    </span>
+                  </div>
+                  <p className="for-card-text">{card.text}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -253,9 +290,12 @@ function LandingPage() {
               className="cta"
               aria-label="Inscrever-se no tutorial gratuito de maquiagem"
             >
-              QUERO PARTICIPAR DE GRAÇA
+              QUERO GARANTIR MEU LUGAR AGORA
             </a>
-            <p className="final-date">TUTORIAL 100% GRATUITO NO DIA 21/05.</p>
+            <p className="final-date">
+              <ClockIcon />
+              <span>TUTORIAL 100% GRATUITO · 21/05 ÀS 20H</span>
+            </p>
           </div>
         </section>
 
@@ -285,6 +325,7 @@ const css = `
   --escuro:#2B0F18;--cinza-texto:#3D2A2F;--cinza-bg:#F7F3F2;--branco:#FFFFFF;
   --dourado:#B8860B;--dourado-claro:#FFF8E1;
   --verde:#4ADE6A;--verde-escuro:#22C55E;--verde-hover:#16A34A;
+  --vermelho:#DC2626;--vermelho-escuro:#B91C1C;
 }
 *,*::before,*::after{box-sizing:border-box}
 html,body{margin:0;padding:0}
@@ -297,24 +338,43 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans
 a{color:var(--rosa-primario)}
 img{max-width:100%;height:auto;display:block}
 
+/* SCARCITY BAR */
+.scarcity-bar{background:linear-gradient(90deg,var(--vermelho-escuro),var(--vermelho));
+  color:#fff;font-size:13.5px;font-weight:600;letter-spacing:.3px;
+  padding:10px 16px;text-align:center;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.scarcity-bar strong{font-weight:800;letter-spacing:.6px}
+.scarcity-dot{width:9px;height:9px;border-radius:50%;background:#fff;
+  box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(255,255,255,.7)}50%{opacity:.55;box-shadow:0 0 0 6px rgba(255,255,255,0)}}
+@media(prefers-reduced-motion:reduce){.scarcity-dot{animation:none}}
+
 /* HERO */
-.hero{background:linear-gradient(180deg,var(--rose-bg) 0%,var(--branco) 100%);color:var(--escuro);padding:72px 0 80px;position:relative}
+.hero{background:linear-gradient(180deg,var(--rose-bg) 0%,var(--branco) 100%);color:var(--escuro);padding:56px 0 80px;position:relative}
 .hero .container{max-width:1180px}
 .hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.hero-text{display:flex;flex-direction:column;align-items:flex-start;gap:22px;text-align:left}
+.hero-text{display:flex;flex-direction:column;align-items:flex-start;gap:18px;text-align:left}
 .hero-text .headline{text-align:left;max-width:none}
 .hero-text .subheadline{text-align:left;max-width:none}
 .hero-image-wrap{width:100%}
 .hero-image{width:100%;height:auto;border-radius:18px;box-shadow:0 16px 40px rgba(43,15,24,.25);object-fit:cover;aspect-ratio:1/1}
-.badge{display:inline-block;font-weight:700;font-size:13px;letter-spacing:1.2px;
-  padding:8px 16px;border-radius:999px;background:var(--rosa-claro);color:var(--rosa-primario)}
-.headline{font-size:44px;line-height:1.15;font-weight:800;color:var(--escuro);margin:0;max-width:760px;letter-spacing:-0.02em}
-.subheadline{font-size:18px;line-height:1.6;color:var(--cinza-texto);max-width:640px;margin:0}
-.hero-date{font-size:13px;font-weight:700;letter-spacing:1px;color:var(--rosa-primario);margin:0}
+.badge{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:14px;letter-spacing:1.4px;
+  padding:10px 18px;border-radius:999px}
+.badge-free{background:var(--vermelho);color:#fff;
+  box-shadow:0 6px 18px rgba(220,38,38,.35);text-transform:uppercase}
+.overline{margin:0;font-size:13px;font-weight:600;letter-spacing:2.2px;
+  color:var(--rosa-primario);text-transform:uppercase}
+.headline{font-size:46px;line-height:1.1;font-weight:800;color:var(--escuro);margin:0;max-width:760px;letter-spacing:-0.025em}
+.subheadline{font-size:15.5px;line-height:1.6;color:var(--cinza-texto);max-width:600px;margin:0;font-weight:400}
+.hero-date{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.hero-date-pill{display:inline-flex;align-items:center;gap:8px;
+  background:var(--branco);color:var(--rosa-primario);
+  border:1.5px solid var(--rosa-claro);
+  padding:8px 14px;border-radius:999px;font-weight:800;font-size:14px;letter-spacing:.5px}
+.hero-date-text{font-size:12px;font-weight:700;letter-spacing:1px;color:var(--cinza-texto);text-transform:uppercase}
 .cta{display:inline-block;background:var(--verde-escuro);color:#fff;text-decoration:none;
-  font-weight:800;font-size:18px;letter-spacing:0.5px;padding:20px 36px;border-radius:12px;
+  font-weight:800;font-size:18px;letter-spacing:0.5px;padding:20px 28px;border-radius:12px;
   min-height:56px;box-shadow:0 6px 20px rgba(34,197,94,.40);transition:background .2s,transform .2s;
-  cursor:pointer;text-align:center;line-height:1.2;width:100%;max-width:460px}
+  cursor:pointer;text-align:center;line-height:1.2;width:100%;max-width:480px}
 .cta:hover{background:var(--verde-hover);transform:translateY(-1px)}
 .cta-pulse{animation:pulse 2.4s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 6px 20px rgba(34,197,94,.40)}50%{box-shadow:0 8px 32px rgba(74,222,106,.75)}}
@@ -327,21 +387,41 @@ img{max-width:100%;height:auto;display:block}
 .section-dark{background:var(--cinza-bg);color:var(--escuro)}
 .section-title{font-size:32px;line-height:1.2;font-weight:800;color:var(--escuro);
   margin:0 0 40px;text-align:center;letter-spacing:-0.01em}
-.section-pink .section-title,.section-light .section-title,.section-dark .section-title{color:var(--escuro)}
 
-/* LEARN LIST */
-.learn-list,.for-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:20px}
-.learn-list li,.for-list li{display:flex;gap:14px;align-items:flex-start;
-  background:var(--cinza-bg);padding:20px 22px;border-radius:12px;
-  box-shadow:0 2px 10px rgba(139,30,63,.06);font-size:16.5px;line-height:1.6;color:var(--cinza-texto)}
-.section-pink .for-list li{background:var(--branco)}
-.learn-icon,.check{font-size:22px;flex-shrink:0;line-height:1.4}
-.learn-list strong{color:var(--escuro);font-weight:700}
-.date-highlight{margin:36px auto 0;display:inline-block;background:var(--rosa-claro);
-  color:var(--rosa-primario);font-weight:700;padding:10px 20px;border-radius:8px;font-size:14px;letter-spacing:1px;text-align:center}
-.narrow.center,.center{display:block}
+/* LEARN LIST — numbered cards */
+.learn-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0;
+  background:var(--branco);border-radius:16px;overflow:hidden;
+  box-shadow:0 4px 24px rgba(139,30,63,.08);border:1px solid rgba(139,30,63,.08)}
+.learn-item{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:flex-start;
+  padding:28px 28px;border-bottom:1px solid rgba(139,30,63,.08)}
+.learn-item:last-child{border-bottom:none}
+.learn-number{font-size:34px;font-weight:800;line-height:1;
+  color:var(--rosa-primario);letter-spacing:-0.02em;
+  min-width:54px;font-variant-numeric:tabular-nums}
+.learn-body{display:flex;flex-direction:column;gap:6px}
+.learn-item-title{margin:0;font-size:19px;font-weight:800;color:var(--escuro);
+  line-height:1.25;letter-spacing:-0.01em}
+.learn-item-text{margin:0;font-size:15.5px;line-height:1.6;color:var(--cinza-texto)}
+.date-highlight{margin:36px auto 0;display:inline-flex;align-items:center;gap:8px;
+  background:var(--rosa-claro);color:var(--rosa-primario);font-weight:800;
+  padding:12px 22px;border-radius:999px;font-size:13.5px;letter-spacing:1px;
+  width:fit-content;margin-left:auto;margin-right:auto}
+.date-highlight{display:flex}
 .section .narrow{margin:0 auto}
-.date-highlight{display:block;width:fit-content;margin-left:auto;margin-right:auto}
+
+/* FOR-YOU CARDS GRID */
+.for-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:980px;margin:0 auto}
+.for-card{background:var(--branco);border-radius:16px;overflow:hidden;
+  box-shadow:0 6px 24px rgba(139,30,63,.10);
+  border:1px solid rgba(139,30,63,.06);
+  display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.for-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(139,30,63,.14)}
+.for-card-image{aspect-ratio:16/9;width:100%;
+  background:linear-gradient(135deg,var(--rose-bg),var(--rosa-claro));
+  display:flex;align-items:center;justify-content:center}
+.for-card-emoji{font-size:54px;line-height:1;filter:drop-shadow(0 4px 8px rgba(139,30,63,.18))}
+.for-card-text{margin:0;padding:22px 24px 26px;font-size:16px;line-height:1.55;color:var(--cinza-texto);font-weight:500}
+.for-grid > .for-card:nth-child(5):last-child{grid-column:span 2;max-width:480px;margin:0 auto;width:100%}
 
 /* AUTHORITY */
 .authority{display:grid;grid-template-columns:320px 1fr;gap:48px;align-items:center;max-width:900px;margin:0 auto}
@@ -359,7 +439,9 @@ img{max-width:100%;height:auto;display:block}
 .final-headline{font-size:30px;line-height:1.25;font-weight:800;color:var(--escuro);
   margin:0 0 20px;letter-spacing:-0.01em}
 .final-sub{font-size:17px;color:var(--cinza-texto);margin:0 0 28px}
-.final-date{margin-top:18px;font-size:13px;font-weight:700;letter-spacing:1px;color:var(--rosa-primario)}
+.final-date{margin:18px auto 0;display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:800;letter-spacing:1px;color:var(--rosa-primario);
+  text-transform:uppercase}
 
 /* FOOTER */
 .footer{background:var(--escuro);color:#D9C8CD;padding:32px 0;font-size:14px;text-align:center}
@@ -370,20 +452,29 @@ img{max-width:100%;height:auto;display:block}
 /* MOBILE */
 @media(max-width:768px){
   .container{padding:0 20px}
-  .hero{padding:48px 0 56px}
+  .hero{padding:36px 0 56px}
   .hero-inner{grid-template-columns:1fr;gap:32px}
   .hero-text{align-items:center;text-align:center}
-  .hero-text .headline,.hero-text .subheadline{text-align:center}
+  .hero-text .headline,.hero-text .subheadline,.overline{text-align:center}
+  .hero-date{align-items:center}
   .hero-image{order:-1}
   .headline{font-size:30px;line-height:1.2}
-  .subheadline{font-size:16px}
+  .subheadline{font-size:14.5px}
   .section{padding:56px 0}
   .section-title{font-size:24px;margin-bottom:28px}
-  .learn-list li,.for-list li{padding:16px 18px;font-size:15.5px}
+  .learn-item{padding:22px 20px;gap:14px}
+  .learn-number{font-size:28px;min-width:42px}
+  .learn-item-title{font-size:17px}
+  .learn-item-text{font-size:14.5px}
+  .for-grid{grid-template-columns:1fr;gap:18px}
+  .for-grid > .for-card:nth-child(5):last-child{grid-column:auto;max-width:none}
+  .for-card-emoji{font-size:46px}
+  .for-card-text{padding:18px 20px 22px;font-size:15px}
   .authority{grid-template-columns:1fr;gap:28px;text-align:center}
   .authority-text{text-align:left}
   .alice-photo-wrap,.alice-photo{width:240px;height:240px}
   .final-headline{font-size:23px}
-  .cta{font-size:17px;padding:18px 24px}
+  .cta{font-size:16px;padding:18px 20px}
+  .scarcity-bar{font-size:12.5px;padding:9px 14px}
 }
 `;
