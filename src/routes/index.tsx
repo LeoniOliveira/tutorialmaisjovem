@@ -7,6 +7,7 @@ import for2 from "@/assets/for-2.webp";
 import for3 from "@/assets/for-3.webp";
 import for4 from "@/assets/for-4.webp";
 import for5 from "@/assets/for-5.webp";
+import for4New from "@/assets/for-4-new.webp";
 import heavyMakeup from "@/assets/heavy-makeup-problem.webp";
 
 // Defer client-only urgency widgets until after first paint
@@ -115,7 +116,7 @@ const learnItems = [
 
 const forCards = [
   {
-    text: "Tem melasma, olheiras, pálpebras caídas ou rugas marcadas e não sabe como lidar com isso na maquiagem",
+    text: "Tem melasma, olheiras, pálpebras caídas ou rugas marcadas e toda vez que tenta cobrir a maquiagem fica pior do que antes.",
     image: for1,
     alt: "Mulher madura com melasma e olheiras se olhando",
   },
@@ -125,19 +126,19 @@ const forCards = [
     alt: "Mulher madura observando o rosto no espelho do banheiro",
   },
   {
-    text: "Já tentou tutoriais no YouTube e nunca conseguiu reproduzir em casa, e acha que o problema é você",
+    text: "Já tentou tutoriais no YouTube, comprou produto caro, pediu ajuda pra filha e nunca funcionou.",
     image: for3,
     alt: "Mulher tentando reproduzir tutorial de maquiagem em casa",
   },
   {
-    text: "Quer uma maquiagem leve e natural que te deixe bonita de verdade, sem parecer máscara",
-    image: for4,
-    alt: "Mulher madura sorrindo com maquiagem leve e natural",
+    text: "Sente que a maquiagem que usava antes não funciona mais porque sua pele mudou e você não sabe como adaptar a técnica.",
+    image: for4New,
+    alt: "Mulher madura confusa segurando produtos antigos de maquiagem em frente ao espelho",
   },
   {
-    text: "Quer se olhar no espelho e se reconhecer de novo",
-    image: for5,
-    alt: "Mulher madura sorrindo ao se olhar no espelho",
+    text: "Quer uma maquiagem leve e natural que te deixe bonita de verdade, sem pesar.",
+    image: for4,
+    alt: "Mulher madura sorrindo com maquiagem leve e natural",
   },
 ];
 
