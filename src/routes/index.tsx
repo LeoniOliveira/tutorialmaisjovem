@@ -265,6 +265,56 @@ function LandingPage() {
           </div>
         </section>
 
+        {/* RESULTADOS */}
+        <section className="section section-results" aria-labelledby="results-title">
+          <div className="container">
+            <h2 id="results-title" className="section-title">
+              Veja resultados reais de quem está aplicando a técnica que você
+              vai aprender
+            </h2>
+            <div className="results-carousel" role="region" aria-label="Carrossel de antes e depois">
+              {[1, 2, 3, 4].map((n) => (
+                <article key={n} className="result-card">
+                  <div className="result-pair">
+                    <div className="result-side result-before">
+                      <span className="result-label result-label-before">ANTES</span>
+                      <div className="result-placeholder" aria-hidden="true">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <circle cx="9" cy="9" r="2" />
+                          <path d="m21 15-5-5L5 21" />
+                        </svg>
+                      </div>
+                    </div>
+                    <div className="result-divider" aria-hidden="true" />
+                    <div className="result-side result-after">
+                      <span className="result-label result-label-after">DEPOIS</span>
+                      <div className="result-placeholder" aria-hidden="true">
+                        <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                          <rect x="3" y="3" width="18" height="18" rx="2" />
+                          <circle cx="9" cy="9" r="2" />
+                          <path d="m21 15-5-5L5 21" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <p className="results-text">
+              Mulheres reais, como você, que antes sofriam com maquiagem que
+              envelhece e hoje se sentem bonitas, seguras e confiantes de
+              verdade. No dia <strong>21/05 às 20h</strong> você vai aprender
+              essa técnica de graça, ao vivo e na prática!
+            </p>
+            <div className="results-cta-wrap">
+              <a href={SENDFLOW_LINK} className="cta" aria-label="Inscrever-se gratuitamente no tutorial">
+                QUERO PARTICIPAR DE GRAÇA
+              </a>
+            </div>
+          </div>
+        </section>
+
 
         {/* APRENDIZADOS */}
         <section className="section section-pink" aria-labelledby="learn-title">
