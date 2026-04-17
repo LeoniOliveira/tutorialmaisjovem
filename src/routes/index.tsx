@@ -92,8 +92,8 @@ function LandingPage() {
               <img
                 src={aliceHero}
                 alt="Alice Salazar maquiando uma mulher de pele madura"
-                width={1047}
-                height={760}
+                width={1000}
+                height={1000}
                 fetchPriority="high"
                 decoding="async"
                 className="hero-image"
@@ -305,7 +305,7 @@ img{max-width:100%;height:auto;display:block}
 .hero-text .headline{text-align:left;max-width:none}
 .hero-text .subheadline{text-align:left;max-width:none}
 .hero-image-wrap{width:100%}
-.hero-image{width:100%;height:auto;border-radius:18px;box-shadow:0 16px 40px rgba(43,15,24,.25);object-fit:cover;aspect-ratio:1047/760}
+.hero-image{width:100%;height:auto;border-radius:18px;box-shadow:0 16px 40px rgba(43,15,24,.25);object-fit:cover;aspect-ratio:1/1}
 .badge{display:inline-block;font-weight:700;font-size:13px;letter-spacing:1.2px;
   padding:8px 16px;border-radius:999px;background:var(--rosa-claro);color:var(--rosa-primario)}
 .headline{font-size:44px;line-height:1.15;font-weight:800;color:var(--escuro);margin:0;max-width:760px;letter-spacing:-0.02em}
