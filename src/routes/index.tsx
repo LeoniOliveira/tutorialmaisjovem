@@ -664,5 +664,7 @@ img{max-width:100%;height:auto;display:block}
   .problem-text p{font-size:15.5px}
   .problem-lead{font-size:17px !important}
   .problem-closing{font-size:15.5px !important;padding:16px 18px}
+  .result-card{flex:0 0 85%}
+  .results-text{font-size:15.5px;margin:24px auto 22px}
 }
 `;
