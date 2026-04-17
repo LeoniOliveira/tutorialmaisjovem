@@ -53,6 +53,19 @@ export default function SeatsBar() {
     >
       <div
         style={{
+          fontSize: 11.5,
+          fontWeight: 600,
+          color: "#3D2A2F",
+          textAlign: "center",
+          padding: "5px 12px",
+          letterSpacing: 0.3,
+        }}
+      >
+        <span style={{ color }}>●</span>{" "}
+        {percent}% das vagas já foram preenchidas · Apenas {remaining} vagas restantes
+      </div>
+      <div
+        style={{
           height: 7,
           width: "100%",
           background: "rgba(0,0,0,0.08)",
@@ -67,19 +80,6 @@ export default function SeatsBar() {
             transition: "width 1.2s ease, background-color 0.6s ease",
           }}
         />
-      </div>
-      <div
-        style={{
-          fontSize: 11.5,
-          fontWeight: 600,
-          color: "#3D2A2F",
-          textAlign: "center",
-          padding: "5px 12px",
-          letterSpacing: 0.3,
-        }}
-      >
-        <span style={{ color }}>●</span>{" "}
-        {percent}% das vagas já foram preenchidas · Apenas {remaining} vagas restantes
       </div>
     </div>
   );
