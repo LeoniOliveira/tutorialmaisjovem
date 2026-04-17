@@ -185,10 +185,9 @@ function LandingPage() {
                 Como Parecer 10 Anos Mais Jovem com Maquiagem
               </h1>
               <p className="subheadline">
-                Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos,
-                sem botox, sem procedimento e sem maquiagem pesada. Desenvolvida
-                especialmente para mulheres de 35 a 70 anos por uma das maiores
-                maquiadoras do Brasil.
+                Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos
+                simples, desenvolvida para mulheres de 35 a 70 anos pela maior
+                maquiadora do Brasil.
               </p>
               <p className="hero-date">
                 <span className="hero-date-pill">
@@ -204,7 +203,7 @@ function LandingPage() {
                 className="cta cta-pulse"
                 aria-label="Inscrever-se no tutorial gratuito de maquiagem"
               >
-                QUERO GARANTIR MEU LUGAR AGORA
+                QUERO PARTICIPAR DE GRAÇA
               </a>
             </div>
             <div className="hero-image-wrap">
