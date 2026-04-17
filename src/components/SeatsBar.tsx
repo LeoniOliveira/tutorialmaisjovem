@@ -39,14 +39,14 @@ export default function SeatsBar() {
     <div
       style={{
         position: "fixed",
-        top: 0,
+        bottom: 0,
         left: 0,
         right: 0,
         zIndex: 100,
         background: "rgba(255,255,255,0.96)",
         backdropFilter: "blur(6px)",
-        borderBottom: "1px solid rgba(0,0,0,0.06)",
-        boxShadow: "0 1px 8px rgba(0,0,0,0.04)",
+        borderTop: "1px solid rgba(0,0,0,0.06)",
+        boxShadow: "0 -1px 8px rgba(0,0,0,0.06)",
       }}
       role="status"
       aria-live="polite"
