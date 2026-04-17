@@ -541,7 +541,36 @@ img{max-width:100%;height:auto;display:block}
 .section{padding:80px 0}
 .section-light{background:var(--branco)}
 .section-pink{background:var(--rose-bg)}
+.section-results{background:linear-gradient(180deg,#FFF8F6 0%,var(--branco) 100%)}
 .section-dark{background:var(--cinza-bg);color:var(--escuro)}
+
+/* RESULTADOS */
+.results-carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;
+  padding:8px 4px 24px;margin:0 -4px;scrollbar-width:thin;scrollbar-color:var(--rosa-claro) transparent;
+  -webkit-overflow-scrolling:touch}
+.results-carousel::-webkit-scrollbar{height:8px}
+.results-carousel::-webkit-scrollbar-thumb{background:var(--rosa-claro);border-radius:4px}
+.result-card{flex:0 0 calc(50% - 10px);scroll-snap-align:start;
+  background:var(--branco);border-radius:18px;overflow:hidden;
+  box-shadow:0 10px 30px rgba(139,30,63,.12);
+  border:1px solid rgba(139,30,63,.08)}
+.result-pair{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch}
+.result-side{position:relative;aspect-ratio:3/4;display:flex;align-items:center;justify-content:center}
+.result-before{background:linear-gradient(135deg,#EFE5E2,#E0D2CE)}
+.result-after{background:linear-gradient(135deg,var(--rose-bg),var(--rosa-claro))}
+.result-divider{width:2px;background:var(--branco)}
+.result-label{position:absolute;top:14px;left:14px;font-size:11px;font-weight:800;letter-spacing:1.5px;
+  padding:5px 10px;border-radius:999px;text-transform:uppercase}
+.result-label-before{background:rgba(43,15,24,.78);color:#fff}
+.result-label-after{background:var(--rosa-primario);color:#fff}
+.result-placeholder{color:rgba(43,15,24,.25)}
+.result-after .result-placeholder{color:var(--rosa-primario);opacity:.4}
+.results-text{max-width:760px;margin:36px auto 28px;text-align:center;
+  font-size:17px;line-height:1.65;color:var(--cinza-texto)}
+.results-text strong{color:var(--rosa-primario);font-weight:800}
+.results-cta-wrap{display:flex;justify-content:center}
+
+
 .section-title{font-size:32px;line-height:1.2;font-weight:800;color:var(--escuro);
   margin:0 0 40px;text-align:center;letter-spacing:-0.01em}
 
