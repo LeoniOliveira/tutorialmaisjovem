@@ -174,22 +174,23 @@ function LandingPage() {
         {/* SCARCITY BAR */}
         <div className="scarcity-bar" role="alert">
           <span className="scarcity-dot" aria-hidden="true" />
-          <strong>Vagas limitadas</strong>
+          <strong>Tutorial Ao Vivo no dia 21/05</strong>
           <span aria-hidden="true"> | </span>
-          <span>Restam algumas vagas disponíveis</span>
+          <span>Vagas Limitadas</span>
         </div>
 
         {/* HERO */}
         <section className="hero" aria-labelledby="hero-title">
           <div className="container hero-inner">
             <div className="hero-text">
-              <span className="badge badge-free">🔴 AULA GRÁTIS</span>
-              <p className="overline">TUTORIAL PARA PELE MADURA</p>
               <h1 id="hero-title" className="headline">
-                Como Parecer 10 Anos Mais Jovem com Maquiagem
+                Tutorial para Pele Madura
               </h1>
+              <h2 className="hero-subheadline">
+                Como Parecer 10 Anos Mais Jovem com Maquiagem
+              </h2>
               <p className="subheadline">
-                Descubra ao vivo a técnica que tira anos do rosto em 3 movimentos
+                Aprenda ao vivo a técnica que tira anos do rosto em 3 movimentos
                 simples, desenvolvida para mulheres de 35 a 70 anos pela maior
                 maquiadora do Brasil.
               </p>
@@ -493,6 +494,7 @@ img{max-width:100%;height:auto;display:block}
 .overline{margin:0;font-size:13px;font-weight:600;letter-spacing:2.2px;
   color:var(--rosa-primario);text-transform:uppercase}
 .headline{font-size:46px;line-height:1.1;font-weight:800;color:var(--escuro);margin:0;max-width:760px;letter-spacing:-0.025em}
+.hero-subheadline{font-size:22px;line-height:1.3;font-weight:600;color:var(--rosa-primario);margin:0;max-width:680px;letter-spacing:-0.01em}
 .subheadline{font-size:15.5px;line-height:1.6;color:var(--cinza-texto);max-width:600px;margin:0;font-weight:400}
 .hero-date{margin:0;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
 .hero-date-pill{display:inline-flex;align-items:center;gap:8px;
@@ -618,11 +620,15 @@ img{max-width:100%;height:auto;display:block}
   .hero{padding:36px 0 56px}
   .hero-inner{grid-template-columns:1fr;gap:32px}
   .hero-text{align-items:center;text-align:center}
-  .hero-text .headline,.hero-text .subheadline,.overline{text-align:center}
+  .hero-text .headline,.hero-text .subheadline,.hero-subheadline,.overline{text-align:center}
   .hero-date{align-items:center}
   .hero-image{order:-1}
   .headline{font-size:30px;line-height:1.2}
+  .hero-subheadline{font-size:17px}
   .subheadline{font-size:14.5px}
+  /* Center-align all text on mobile */
+  .page, .page p, .page h1, .page h2, .page h3, .page h4, .page li, .page span, .page a, .page div{text-align:center}
+  .authority-text, .authority-text p{text-align:center}
   .section{padding:56px 0}
   .section-title{font-size:24px;margin-bottom:28px}
   .learn-item{padding:22px 20px;gap:14px}
