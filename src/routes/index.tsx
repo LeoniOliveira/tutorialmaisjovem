@@ -8,7 +8,7 @@ import for3 from "@/assets/for-3.webp";
 import for4 from "@/assets/for-4.webp";
 import for5 from "@/assets/for-5.webp";
 import for4New from "@/assets/for-4-new.webp";
-import heavyMakeup from "@/assets/heavy-makeup-problem.webp";
+import heavyMakeup from "@/assets/heavy-makeup.webp";
 import antesDepois3 from "@/assets/antes-depois-3.webp";
 import antesDepois4 from "@/assets/antes-depois-4.webp";
 import antesDepois5 from "@/assets/antes-depois-5.webp";
