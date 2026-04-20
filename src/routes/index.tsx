@@ -24,8 +24,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Tutorial Gratuito — Como Parecer 10 Anos Mais Jovem com Maquiagem | Alice Salazar",
+        title: "Tutorial Gratuito — Como Parecer 10 Anos Mais Jovem com Maquiagem | Alice Salazar",
       },
       {
         name: "description",
@@ -34,8 +33,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content:
-          "Tutorial para Pele Madura — Pareça 10 Anos Mais Jovem | Alice Salazar",
+        content: "Tutorial para Pele Madura — Pareça 10 Anos Mais Jovem | Alice Salazar",
       },
       {
         property: "og:description",
@@ -47,13 +45,11 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content:
-          "Tutorial para Pele Madura — Pareça 10 Anos Mais Jovem | Alice Salazar",
+        content: "Tutorial para Pele Madura — Pareça 10 Anos Mais Jovem | Alice Salazar",
       },
       {
         name: "twitter:description",
-        content:
-          "Tutorial ao vivo e gratuito no dia 21/05. A técnica que tira anos do rosto em 3 movimentos.",
+        content: "Tutorial ao vivo e gratuito no dia 21/05. A técnica que tira anos do rosto em 3 movimentos.",
       },
     ],
     links: [
@@ -186,22 +182,17 @@ function LandingPage() {
               <h1 id="hero-title" className="headline">
                 Tutorial para Pele Madura
               </h1>
-              <h2 className="hero-subheadline">
-                Como Parecer 10 Anos Mais Jovem com Maquiagem
-              </h2>
+              <h2 className="hero-subheadline">Como Parecer 10 Anos Mais Jovem com Maquiagem</h2>
               <p className="subheadline">
-                Aprenda ao vivo a técnica que tira anos do rosto em 3 movimentos
-                simples, desenvolvida para mulheres de 35 a 70 anos pela maior
-                maquiadora do Brasil.
+                Aprenda ao vivo a técnica que tira anos do rosto em 3 movimentos simples, desenvolvida para mulheres de
+                35 a 70 anos pela maior maquiadora do Brasil.
               </p>
               <p className="hero-date">
                 <span className="hero-date-pill">
                   <ClockIcon />
                   <span>21/05 · Às 20h</span>
                 </span>
-                <span className="hero-date-text">
-                  TUTORIAL 100% GRATUITO. CLIQUE NO BOTÃO ABAIXO PARA PARTICIPAR.
-                </span>
+                <span className="hero-date-text">TUTORIAL 100% GRATUITO. CLIQUE NO BOTÃO ABAIXO PARA PARTICIPAR.</span>
               </p>
               <a
                 href={SENDFLOW_LINK}
@@ -229,8 +220,8 @@ function LandingPage() {
         <section className="section section-light" aria-labelledby="problem-title">
           <div className="container problem-container">
             <h2 id="problem-title" className="problem-headline">
-              Você sabia que a maquiagem que você está usando hoje pode estar te
-              envelhecendo <span className="problem-headline-accent">mais do que as próprias rugas?</span>
+              Você sabia que a maquiagem que você está usando hoje pode estar te envelhecendo{" "}
+              <span className="problem-headline-accent">mais do que as próprias rugas?</span>
             </h2>
             <div className="problem-grid">
               <div className="problem-image-wrap">
@@ -246,24 +237,22 @@ function LandingPage() {
               </div>
               <div className="problem-text">
                 <p className="problem-lead">
-                  O problema <strong>não é sua idade</strong>, sua pele ser
-                  difícil ou porque você não nasceu para a maquiagem.
+                  O problema <strong>não é sua idade</strong>, sua pele ser difícil ou porque você não nasceu para a
+                  maquiagem.
                 </p>
                 <p>
-                  A verdade é que a técnica que você aprendeu anos atrás{" "}
-                  <strong>já não funciona mais</strong> para a sua pele hoje.
+                  A verdade é que a técnica que você aprendeu anos atrás <strong>já não funciona mais</strong> para a
+                  sua pele hoje.
                 </p>
                 <p>
-                  Você não precisa de produtos caros, horas de tentativa e muito
-                  menos técnicas complexas para ter uma make perfeita, com zero
-                  rugas e aquela pele com efeito de pêssego. Com uma sequência
-                  de 3 movimentos simples, em menos de 15 minutos, sua aparência
-                  fica <strong>10 ANOS MAIS JOVEM</strong>, sem exageros.
+                  Você não precisa de produtos caros, horas de tentativa e muito menos técnicas complexas para ter uma
+                  make perfeita, com zero rugas e aquela pele com efeito de pêssego. <br></br>
+                  <br></br>Com uma sequência de 3 movimentos simples, em menos de 15 minutos, sua aparência fica{" "}
+                  <strong>10 ANOS MAIS JOVEM</strong>, sem exageros.
                 </p>
                 <p className="problem-closing">
-                  E é isso que você vai aprender <strong>de graça</strong> com a
-                  maior referência em maquiagem do Brasil no Tutorial de
-                  Maquiagem para Pele Madura.
+                  E é isso que você vai aprender <strong>de graça</strong> com a maior referência em maquiagem do Brasil
+                  no Tutorial de Maquiagem para Pele Madura.
                 </p>
               </div>
             </div>
@@ -274,8 +263,7 @@ function LandingPage() {
         <section className="section section-results" aria-labelledby="results-title">
           <div className="container results-container">
             <h2 id="results-title" className="section-title">
-              Veja resultados reais de quem está aplicando a técnica que você
-              vai aprender
+              Veja resultados reais de quem está aplicando a técnica que você vai aprender
             </h2>
             <div className="results-grid">
               {[
@@ -290,10 +278,9 @@ function LandingPage() {
               ))}
             </div>
             <p className="results-text">
-              Mulheres reais, como você, que antes sofriam com maquiagem que
-              envelhece e hoje se sentem bonitas, seguras e confiantes de
-              verdade. No dia <strong>21/05 às 20h</strong> você vai aprender
-              essa técnica de graça, ao vivo e na prática!
+              Mulheres reais, como você, que antes sofriam com maquiagem que envelhece e hoje se sentem bonitas, seguras
+              e confiantes de verdade. No dia <strong>21/05 às 20h</strong> você vai aprender essa técnica de graça, ao
+              vivo e na prática!
             </p>
             <div className="results-cta-wrap">
               <a href={SENDFLOW_LINK} className="cta" aria-label="Inscrever-se gratuitamente no tutorial">
@@ -302,7 +289,6 @@ function LandingPage() {
             </div>
           </div>
         </section>
-
 
         {/* APRENDIZADOS */}
         <section className="section section-pink" aria-labelledby="learn-title">
@@ -376,18 +362,16 @@ function LandingPage() {
               </div>
               <div className="authority-text">
                 <p>
-                  Alice Salazar é a maior referência em maquiagem do Brasil e
-                  especialista em maquiagem para a pele madura.
+                  Alice Salazar é a maior referência em maquiagem do Brasil e especialista em maquiagem para a pele
+                  madura.
                 </p>
                 <p>
-                  Com mais de <strong>6 milhões de seguidoras</strong>, formação
-                  internacional em Paris, Dubai, Londres e Nova York, e mais de{" "}
-                  <strong>40 mil alunas</strong> que transformaram sua autoestima.
+                  Com mais de <strong>6 milhões de seguidoras</strong>, formação internacional em Paris, Dubai, Londres
+                  e Nova York, e mais de <strong>40 mil alunas</strong> que transformaram sua autoestima.
                 </p>
                 <p>
-                  Neste Tutorial ao vivo, ela vai ensinar na prática como
-                  parecer 10 anos mais jovem com uma única técnica de
-                  maquiagem, sem produtos caros e sem pesar.
+                  Neste Tutorial ao vivo, ela vai ensinar na prática como parecer 10 anos mais jovem com uma única
+                  técnica de maquiagem, sem produtos caros e sem pesar.
                 </p>
                 <a
                   href={SENDFLOW_LINK}
@@ -396,9 +380,7 @@ function LandingPage() {
                 >
                   QUERO PARTICIPAR DE GRAÇA
                 </a>
-                <p className="authority-warning">
-                  ⚠️ Tutorial 100% Gratuito — Dia 21/05 às 20h — Vagas Limitadas
-                </p>
+                <p className="authority-warning">⚠️ Tutorial 100% Gratuito — Dia 21/05 às 20h — Vagas Limitadas</p>
               </div>
             </div>
           </div>
@@ -408,18 +390,11 @@ function LandingPage() {
         <section className="section section-dark" aria-labelledby="final-title">
           <div className="container narrow center">
             <h2 id="final-title" className="final-headline">
-              Sua pele não é difícil. Tudo que faltava para parecer mais jovem é
-              a técnica certa — e você vai aprender ela ao vivo e de graça.
+              Sua pele não é difícil. Tudo que faltava para parecer mais jovem é a técnica certa — e você vai aprender
+              ela ao vivo e de graça.
             </h2>
-            <p className="final-sub">
-              Clique no botão abaixo e participe do tutorial de maquiagem para
-              pele madura!
-            </p>
-            <a
-              href={SENDFLOW_LINK}
-              className="cta"
-              aria-label="Inscrever-se no tutorial gratuito de maquiagem"
-            >
+            <p className="final-sub">Clique no botão abaixo e participe do tutorial de maquiagem para pele madura!</p>
+            <a href={SENDFLOW_LINK} className="cta" aria-label="Inscrever-se no tutorial gratuito de maquiagem">
               QUERO GARANTIR MEU LUGAR AGORA
             </a>
             <p className="final-date">
@@ -433,13 +408,9 @@ function LandingPage() {
           <div className="container center">
             <p>© 2026 Alice Salazar — Todos os direitos reservados.</p>
             <p className="footer-links">
-              <a href="https://alicesalazarcursos.com.br/termos-de-uso/">
-                Termos de Uso
-              </a>
+              <a href="https://alicesalazarcursos.com.br/termos-de-uso/">Termos de Uso</a>
               <span aria-hidden="true"> · </span>
-              <a href="https://alicesalazarcursos.com.br/politicas-de-privacidade">
-                Política de Privacidade
-              </a>
+              <a href="https://alicesalazarcursos.com.br/politicas-de-privacidade">Política de Privacidade</a>
             </p>
           </div>
         </footer>
