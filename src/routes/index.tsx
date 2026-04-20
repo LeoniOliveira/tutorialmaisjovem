@@ -395,7 +395,7 @@ function LandingPage() {
           <div className="container narrow center final-inner">
             <span className="final-eyebrow">🎀 Última chance</span>
             <h2 id="final-title" className="final-headline">
-              Clique no botão abaixo e participe do <span className="final-highlight">Tutorial de Maquiagem para Pele Madura</span> e aprenda a técnica com efeito rejuvenescedor que vai deixar você <strong>10 anos mais jovem!</strong>
+              Clique no botão abaixo e participe do <span className="final-highlight">Tutorial de Maquiagem para Pele Madura</span> e aprenda a técnica que vai deixar você <strong>10 anos mais jovem</strong>
             </h2>
             <div className="final-arrow" aria-hidden="true">
               <svg viewBox="0 0 60 80" width="48" height="64" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
@@ -581,11 +581,11 @@ img{max-width:100%;height:auto;display:block}
 
 /* FINAL CTA */
 .section-final{position:relative;overflow:hidden;
-  background:radial-gradient(ellipse at top,#FCE9E4 0%,#FADBD8 45%,#F4C9C2 100%);
+  background:#FAF7F5;
   padding:88px 0 96px}
-.final-decor{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none;z-index:0}
-.final-decor-1{width:380px;height:380px;background:#F8B4B4;top:-120px;left:-120px}
-.final-decor-2{width:340px;height:340px;background:#FCE9E4;bottom:-140px;right:-100px}
+.final-decor{position:absolute;border-radius:50%;filter:blur(60px);opacity:.35;pointer-events:none;z-index:0}
+.final-decor-1{width:380px;height:380px;background:#F8D7D2;top:-120px;left:-120px}
+.final-decor-2{width:340px;height:340px;background:#F4E4DF;bottom:-140px;right:-100px}
 .final-inner{position:relative;z-index:1}
 .final-eyebrow{display:inline-block;background:#fff;color:var(--rosa-primario);
   font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;
