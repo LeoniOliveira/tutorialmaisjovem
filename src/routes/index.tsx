@@ -220,8 +220,8 @@ function LandingPage() {
         <section className="section section-light" aria-labelledby="problem-title">
           <div className="container problem-container">
             <h2 id="problem-title" className="problem-headline">
-              Você sabia que a maquiagem que você está usando hoje pode estar te envelhecendo{" "}
-              <span className="problem-headline-accent">mais do que as próprias rugas?</span>
+              A maquiagem que você faz hoje está envelhecendo mais que as próprias rugas,{" "}
+              <span className="problem-headline-accent"> e existe é o motivo…</span>
             </h2>
             <div className="problem-grid">
               <div className="problem-image-wrap">
