@@ -246,8 +246,10 @@ function LandingPage() {
                 </p>
                 <p>
                   Você não precisa de produtos caros, horas de tentativa e muito menos técnicas complexas para ter uma
-                  make perfeita, com zero rugas e aquela pele com efeito de pêssego. <br></br>
-                  <br></br>Com uma sequência de 3 movimentos simples, em menos de 15 minutos, sua aparência fica{" "}
+                  make perfeita, com zero rugas e aquela pele com efeito de pêssego.
+                </p>
+                <p>
+                  Com uma sequência de 3 movimentos simples, em menos de 15 minutos, sua aparência fica{" "}
                   <strong>10 ANOS MAIS JOVEM</strong>, sem exageros.
                 </p>
                 <p className="problem-closing">
