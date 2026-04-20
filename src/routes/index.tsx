@@ -296,7 +296,7 @@ function LandingPage() {
         <section className="section section-pink" aria-labelledby="learn-title">
           <div className="container narrow">
             <h2 id="learn-title" className="section-title">
-              O que você vai aprender no Tutorial?
+              O que você vai aprender no Tutorial
             </h2>
             <ol className="learn-list">
               {learnItems.map((item, i) => (
@@ -322,7 +322,7 @@ function LandingPage() {
         <section className="section section-light" aria-labelledby="for-title">
           <div className="container">
             <h2 id="for-title" className="section-title">
-              Esse Tutorial é para você que:
+              Esse Tutorial é para você que
             </h2>
             <div className="for-grid">
               {forCards.map((card, i) => (
@@ -389,19 +389,25 @@ function LandingPage() {
         </section>
 
         {/* CTA FINAL */}
-        <section className="section section-dark" aria-labelledby="final-title">
-          <div className="container narrow center">
+        <section className="section section-final" aria-labelledby="final-title">
+          <div className="final-decor final-decor-1" aria-hidden="true" />
+          <div className="final-decor final-decor-2" aria-hidden="true" />
+          <div className="container narrow center final-inner">
+            <span className="final-eyebrow">🎀 Última chance</span>
             <h2 id="final-title" className="final-headline">
-              Sua pele não é difícil. Tudo que faltava para parecer mais jovem é a técnica certa — e você vai aprender
-              ela ao vivo e de graça.
+              Clique no botão abaixo e participe do <span className="final-highlight">Tutorial de Maquiagem para Pele Madura</span> e aprenda a técnica com efeito rejuvenescedor que vai deixar você <strong>10 anos mais jovem!</strong>
             </h2>
-            <p className="final-sub">Clique no botão abaixo e participe do tutorial de maquiagem para pele madura!</p>
-            <a href={SENDFLOW_LINK} className="cta" aria-label="Inscrever-se no tutorial gratuito de maquiagem">
-              QUERO GARANTIR MEU LUGAR AGORA
+            <div className="final-arrow" aria-hidden="true">
+              <svg viewBox="0 0 60 80" width="48" height="64" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M30 8 V 60" />
+                <path d="M14 46 L 30 64 L 46 46" />
+              </svg>
+            </div>
+            <a href={SENDFLOW_LINK} className="cta cta-final" aria-label="Inscrever-se no tutorial gratuito de maquiagem">
+              QUERO PARTICIPAR DE GRAÇA
             </a>
-            <p className="final-date">
-              <ClockIcon />
-              <span>TUTORIAL 100% GRATUITO · 21/05 ÀS 20H</span>
+            <p className="final-warning">
+              ⚠️ Tutorial 100% Gratuito — Dia 21/05 às 20h — Vagas Limitadas
             </p>
           </div>
         </section>
