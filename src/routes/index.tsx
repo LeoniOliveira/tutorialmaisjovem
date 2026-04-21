@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { lazy, Suspense, useEffect, useState } from "react";
+
 import aliceHero from "@/assets/alice-hero.webp";
 import aliceAuthority from "@/assets/alice-authority.webp";
 import for1 from "@/assets/for-1.webp";
@@ -13,9 +13,6 @@ import antesDepois3 from "@/assets/antes-depois-3.webp";
 import antesDepois4 from "@/assets/antes-depois-4.webp";
 import antesDepois5 from "@/assets/antes-depois-5.webp";
 import antesDepois6 from "@/assets/antes-depois-6.webp";
-
-// Defer client-only urgency widgets until after first paint
-const SeatsBar = lazy(() => import("@/components/SeatsBar"));
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
@@ -142,28 +139,9 @@ const forCards = [
 ];
 
 function LandingPage() {
-  const [showUrgency, setShowUrgency] = useState(false);
-
-  useEffect(() => {
-    const w = window as Window & {
-      requestIdleCallback?: (cb: () => void, opts?: { timeout: number }) => number;
-    };
-    const id = w.requestIdleCallback
-      ? w.requestIdleCallback(() => setShowUrgency(true), { timeout: 2500 })
-      : window.setTimeout(() => setShowUrgency(true), 1500);
-    return () => {
-      if (typeof id === "number") window.clearTimeout(id);
-    };
-  }, []);
-
   return (
     <>
       <style>{css}</style>
-      {showUrgency && (
-        <Suspense fallback={null}>
-          <SeatsBar />
-        </Suspense>
-      )}
       <main className="page">
         {/* SCARCITY BAR */}
         <div className="scarcity-bar" role="alert">
