@@ -16,7 +16,6 @@ import antesDepois6 from "@/assets/antes-depois-6.webp";
 
 // Defer client-only urgency widgets until after first paint
 const SeatsBar = lazy(() => import("@/components/SeatsBar"));
-const SignupNotifications = lazy(() => import("@/components/SignupNotifications"));
 
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
@@ -163,7 +162,6 @@ function LandingPage() {
       {showUrgency && (
         <Suspense fallback={null}>
           <SeatsBar />
-          <SignupNotifications />
         </Suspense>
       )}
       <main className="page">
