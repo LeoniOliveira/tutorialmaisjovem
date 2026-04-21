@@ -14,9 +14,6 @@ import antesDepois4 from "@/assets/antes-depois-4.webp";
 import antesDepois5 from "@/assets/antes-depois-5.webp";
 import antesDepois6 from "@/assets/antes-depois-6.webp";
 
-// Defer client-only urgency widgets until after first paint
-const SeatsBar = lazy(() => import("@/components/SeatsBar"));
-
 const SENDFLOW_LINK = "[SENDFLOW_LINK]";
 
 export const Route = createFileRoute("/")({
